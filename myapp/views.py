@@ -43,13 +43,13 @@ def index(request):
                 if d['slang'] == slangs :
                     pass_slang={'slang_view':d}
                     return render(request,'index.html',pass_slang)
-                '''
+            '''
                 else:
                     error_message = "Oops ! Looks like 'Slang Not Found' 😔 "
                     pass_slang={'error_message': error_message}
                     return render(request,'index.html',pass_slang)
-               '''
-           
+               
+           '''
                     
                    
 
