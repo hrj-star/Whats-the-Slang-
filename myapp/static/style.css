@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --card-color:#9A97F3;
+    --next-color:#FAD1DF;
+    --text-color:#292922;
+    --text2-color: #292922;
+    --hover-color:#292922;
+    --status-color:#292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+    --card-color:#fff;
+    --next-color:#FAD1DF;
+    --text-color:#FAD1DF;
+    --text2-color:#00ff9e;
+    --hover-color:#00acee;
+    --status-color:#818cab;
+}
+
+
+
+
+body
+{
+	background-color: var(--bg-color);
+  color: var(--font-color);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 0;
+  }
+  
+
+h1{
+
+  font-family: 'Lobster Two', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--heading-color);
+
+}
+
+.center
+{
+	width: 80%;
+	text-align: center;
+	margin:auto;
+	font-weight: bold; 
+}
+
+#form
+{
+	width: 80%;
+	padding: 2%;
+	margin: auto;
+	transform: translateY(20%); 
+}
+button
+{
+	display: block;
+	width: 40%;
+	padding: 1%;
+	border-radius: 10px;
+	border: none;
+	margin: 5% auto;
+	background-color: #6F1E51;
+	color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+}
+button:hover
+{
+	cursor: pointer;
+	box-shadow: 2px 2px 5px #cdcdcd;
+	font-size: 18px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'Ubuntu', sans-serif; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+input
+{
+	width: 48%;
+	padding: 1%;
+	border-radius: 10px;
+	border: 1px solid #eaeaea;
+	margin: 0% 6%;
+}
+label
+{
+  margin: 5%;
+  width:200px;
+	text-align: center;
+}
+#result
+{
+	height: auto;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+#title
+{
+	width: 70%;
+	float: left;
+	background-color: #6F1E51;
+	color: #ffffff;
+	text-align: center;
+	padding: 2%;
+	margin: auto;
+}
+
+#def
+{
+	padding: 2%;
+	float: left;
+	border: 1px solid #eaeaea;
+	width: 70%;
+	margin: auto;
+}
+.errorMsg
+{
+	width: 70%;
+	float: left;
+	color: red;
+	font-size: 12px;
+	display: block;
+	margin: 1% 25%; 
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: #fcfcfc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  
+
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+

@@ -1,0 +1,114 @@
+<!-- this is a comment -->
+{% load static %}
+
+<!-- html tag comes here-->
+<html>
+  <!-- head tag comes here-->
+<head>
+    <meta charset="UTF-8" /> 
+    
+     <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+   <meta name="theme-color" content="#317EFB"/>
+     <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500"
+      rel="stylesheet"
+    /> 
+
+    <!-- 2 add a theme color <meta name="theme-color" content="#ffffff" /> -->
+
+    <!-- title goes here -->
+   <title>What's the Slang ?</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" /> 
+
+
+  </head>
+
+
+<body>
+  <nav>
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <div class="slider round"></div>
+    </label>
+    </div>
+
+  </nav>
+ 
+    <header>
+      <h1 class="center">
+          <br>
+        What's the Slang ?
+    
+      </h1>
+    </header>
+  
+
+    <form id="form1" method="post">
+        {% csrf_token %}
+    <div id="form">
+        <div class="form-group">  
+       <label for ="searchBox" style="font-size: 22px;">Enter Slang :</label>
+    
+       <input
+        type="text"
+        name="searchBox1"
+        placeholder="Enter Slang"
+        id="searchBox"
+        style="font-size: 22px;"
+      /> 
+
+      <label for ="searchBox" style="font-size: 22px;">Translation / Meaning :</label>
+    
+      <input
+       type="text"
+       name="searchBox2"
+       placeholder="Enter meaning"
+       id="searchBox"
+       style="font-size: 22px;"
+     /> 
+ 
+      <span class="errorMsg"  >
+        {% if error_message %}
+        <h2>{{ error_message }}</h2>
+        {% endif %}
+      </span>
+
+  
+        <button name="submit" id="submit">
+          Search
+      </button>
+      
+    </div>
+</div>
+    </form>
+
+<!--
+     <div id="result">
+ 
+      <div id="def">
+        <i><div id="slangzz"></div></i> 
+        <div id="defs">
+          <br />
+          <ul id="list"></ul> 
+        </div>
+        <span class="noRes"></span>
+        {% block content%}
+      
+        <h2>{{slang_view.slang  }} : {{slang_view.meaning}}</h2>
+ 
+       
+   
+     {% endblock content%}
+      </div>
+
+      
+    </div> 
+
+-->
+    <!-- add js file -->
+    <!--<script type="text/javascript">-->
+      <script type="text/javascript" src="{% static 'script.js' %}"></script>
+
+  </body>
+</html>
